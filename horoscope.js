@@ -4,17 +4,18 @@ const resultEl = document.getElementById("result");
 const calculateEl = document.getElementById("calculate");
 
 calculateEl.addEventListener('click', () => {
-    const day = dayEl.value
-    const month = monthEl.value
-    resultEl.numberContent = qw(month, day)
+    const day = Number(dayEl.value)
+    const month = Number(monthEl.value)
+    resultEl.textContent = qw(month, day)
 })
 
 function qw(month, day) {
 
-let znak = undefined
+    let znak = undefined
     switch (month) {
         case 1:
             if (day <= 19) {
+                console.log(month, day)
                 znak = "Kozerog"
             } else {
                 znak = "Vodoley"
@@ -99,5 +100,6 @@ let znak = undefined
             break;
 
     }
+    console.log(znak)
     return znak
 }

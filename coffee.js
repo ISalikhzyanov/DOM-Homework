@@ -5,15 +5,14 @@ const calculateEl = document.getElementById("calculate");
 
 calculateEl.addEventListener('click', () => {
     const drink = drinkEl.value
-    const sum = sumEl.value
+    const sum = Number(sumEl.value)
     resultEl.textContent = coffee(drink, sum)
 })
 
-const summa = 0
 
 function coffee(drink, sum) {
-    if (summa <= 100) {
-        sum = summa
+    if (sum > 100) {
+        summa = sum
     } else {
         console.log("Внесите сумму не более 100 рублей")
     }
